@@ -30,6 +30,11 @@ public class Product {
 	public static void staticPriceUpdate(Product p) {
 		p.setPrice(p.getPrice() * 1.1);
 	}
+	
+	// O método não estático acessa o atributo da própria instância.
+	public void nonStaticPriceUpdate() {
+		price *= 1.1;
+	}
 
 	@Override
 	public String toString() {
